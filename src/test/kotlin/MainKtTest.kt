@@ -13,7 +13,7 @@ class MainKtTest {
 
         val result = payment(itemCount, dayTransaction)
 
-        assertEquals(5000.0, result)
+        assertEquals(0.0, result)
     }
     @Test
     fun payment_DefaultVkPayCommissionTransactionLimitExceed_returnMinusOne() {
