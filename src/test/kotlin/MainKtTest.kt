@@ -9,19 +9,17 @@ class MainKtTest {
     fun payment_DefaultVkPayCommissionLimitNotExceed_returnZero() {
         val itemCount = 14000.0
         val dayTransaction = 0.0
-        val typeCard = "VK Pay"
-        val lastSumTransaction = 0.0
+
 
         val result = payment(itemCount, dayTransaction)
 
-        assertEquals(0.0, result)
+        assertEquals(5000.0, result)
     }
     @Test
     fun payment_DefaultVkPayCommissionTransactionLimitExceed_returnMinusOne() {
         val itemCount = 20000.0
         val dayTransaction = 0.0
-        val typeCard = "VK Pay"
-        val lastSumTransaction = 0.0
+
 
         val result = payment(itemCount, dayTransaction)
 
